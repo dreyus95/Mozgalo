@@ -1,0 +1,4 @@
+Gaussian mixture model
+K-means
+hierarhical clustering
+neural network
