@@ -1,4 +1,4 @@
 Gaussian mixture model
 K-means
 hierarhical clustering
-neuronska
+neural network
