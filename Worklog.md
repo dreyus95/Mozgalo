@@ -20,4 +20,16 @@ Description:
 
 
 
-*============================= 09.04.2017. SUNDAY 12:00-16:00 =============================*
+*============================= 09.04.2017. SUNDAY 13:00-17:00 =============================*
+
+- succesfully reduced number of features with PCA algorithm
+		- tried with 'mle' : got 627 features reduced set
+- tried implementing KMeans and GMM model on reduced set
+		- best results so far : 14 clusters
+		- still getting 2-3 clusters divided, though they should be same
+
+- NEXT MEETING TODO:
+	- try hierarchical grouping algorithm
+	- compare and collect results from all tried algorithms
+	- fix and document written code
+	- find a good visualization tool
