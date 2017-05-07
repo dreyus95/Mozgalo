@@ -33,3 +33,16 @@ Description:
 	- compare and collect results from all tried algorithms
 	- fix and document written code
 	- find a good visualization tool
+
+
+*============================= 07.05.2017. SUNDAY 12:00-16:00 =============================*
+
+- initial clustering is done : 10 clusters, 1000 features
+- tried out the Wordnet api for classification of clusters by word ( word embeddings)
+		- api is working awesome for some clusters,  horrible for others
+
+
+- NEXT MEETING TODO:
+	- try hierarchical clustering for Mozgalo dataset
+	- try the model on harder 256 class dataset
+	- VISUALIZATION!!!
