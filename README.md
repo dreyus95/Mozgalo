@@ -13,12 +13,14 @@ Franjo Matković
 
 ## Project theme: Unsupervised clustering of a given dataset
 
-Project is written in Python 3 using Resnet framework for feature extraction. We have decided for [Torch](http://torch.ch/blog/2016/02/04/resnets.html) implementation due to its CUDA principles. Instructions on how to setup everything can be found bellow.
+Project is written in Python 3 using Resnet framework for feature extraction. We have decided for [Torch](http://torch.ch/blog/2016/02/04/resnets.html) implementation due to its CUDA principles. 
+Instructions on how to setup everything can be found bellow.
 
 ## Table of contents
 
 <a href="#Req">Requirements</a><br>
 <a href='#Packages'>Packages and installation</a><br>
+<a href='#Usage'>Using Torch</a><br>
 <a href='#Results'>Results</a><br>
 
 ## Requirements
@@ -28,13 +30,14 @@ Project is written in Python 3 using Resnet framework for feature extraction. We
 Python 3
 CUDA capable machine (Unix/Linux is recommended) -> NVIDIA GPU
 Jupyter Notebook
+
 ```
   
 ## Packages and installation
 <a id='Packages'></a>
 If you don't have an NVIDIA GPU then you will not be able to run this model for feature extraction.
 Luckily, we have already extracted and pushed the features for our given dataset in the repository.
-To use the code we suggestnot having the virtual environment, but pure Unix/Linux.  
+To use the code we suggest not having the virtual environment, but pure Unix/Linux.  
   
 1.	To install Torch follow the instructions on [](http://torch.ch/docs/gettingstarted.html) link.
 
@@ -49,6 +52,34 @@ To use the code we suggestnot having the virtual environment, but pure Unix/Linu
 6.	For word embedding we used the NLTK framework which contains WordNet database of english words and their connections.
 	Install it using : sudo pip install -U nltk
 
+## Using Torch
+<a id='Usage'></a>
+Before doing anything, it is required that all images from dataset are in PNG format.
+We have provided a simple convertImageFormat.py script to do so. Make sure you position your dataset in the right directory
+as it is written inside the script and run it.
+
+To extract images use the next command:
+
+```
+	features.lua resnet-200.t7 path_to_pic
+
+	features.lua resnet-200.t7 *    (for all pictures in dataset dir)
+
+
+```
+
+After this you get the features.t7 file with all features.
+Size of feature vectors is 2048x1.
+To classify pictures(used for word embedding) use the following command:
+
+```
+	th classify.lua resnet-200.t7 path_to_pic
+
+
+```
+
+You can see our implementation of word embeddings inside UnsupervisedImageClassifier.ipynb notebook and the results it yielded.
+
 
 ## Results
 <a id='Results'></a>
@@ -58,5 +89,5 @@ wih the best result. The number of clusters we chose was 10, as it also visually
 with the numbers so you can see what suits your wishes for clustering best.
 
 We have also tried the model on a harder dataset, which you can see in our UnsupervisedLearningHarderDatasetGMM.ipynb notebook.
-You can see how well the model works on a labeled dataset, as we used the Adjuster Rand Index to verify how good our cluster
+You can see how well the model works on a labeled dataset, as we used the Adjusted Rand Index to verify how good our cluster
 predictions are in contrast to the real results.
