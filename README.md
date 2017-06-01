@@ -1,9 +1,3 @@
-This is the implementation of the Mozgalo task. Dataset of features is loaded with torchfile library, which knows how to load already extracted features inside xxx.t7 file that contains the results of feature extraction done by Torch.
-
-PCA is used to reduce the high dimensionality(Torch output is 2048 features per example image), and remove potential linear correlation between features.
-
-As an optimal clustering method it was decided for GMM to be used.
-
 All rights reserved © FerKani
 
 Goran Brlas
@@ -42,8 +36,7 @@ If you don't have an NVIDIA GPU then you will not be able to run this model for 
 Luckily, we have already extracted and pushed the features for our given dataset in the repository.
 To use the code we suggestnot having the virtual environment, but pure Unix/Linux.  
   
-```
-1.	To install Torch follow the instructions on [this](http://torch.ch/docs/gettingstarted.html) link.
+1.	To install Torch follow the instructions on [](http://torch.ch/docs/gettingstarted.html) link.
 
 2.	Next, install CudNN library from [this](https://developer.nvidia.com/cudnn) link following the exact instructions.
 
@@ -56,7 +49,6 @@ To use the code we suggestnot having the virtual environment, but pure Unix/Linu
 6.	For word embedding we used the NLTK framework which contains WordNet database of english words and their connections.
 	Install it using : sudo pip install -U nltk
 
-```  
 
 ## Results
 <a id='Results'></a>
