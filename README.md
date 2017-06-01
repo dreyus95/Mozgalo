@@ -29,9 +29,12 @@ Instructions on how to setup everything can be found bellow.
 
 ```
 Python 3
+```
+```
 CUDA capable machine (Unix/Linux is recommended) -> NVIDIA GPU
+```
+```
 Jupyter Notebook
-
 ```
 
 
@@ -70,7 +73,8 @@ To extract images use the next command:
 
 ```
 	features.lua resnet-200.t7 path_to_pic
-
+```
+```
 	features.lua resnet-200.t7 *    (for all pictures in dataset dir)
 
 ```
