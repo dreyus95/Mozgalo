@@ -43,7 +43,7 @@ If you don't have an NVIDIA GPU then you will not be able to run this model for 
 Luckily, we have already extracted and pushed the features for our given dataset in the repository.
 To use the code we suggest not having the virtual environment, but pure Unix/Linux.  
   
-1.	To install Torch follow the instructions on [this](http://torch.ch/docs/gettingstarted.html) link.
+1.	To install Torch follow the instructions on [this](http://torch.ch/docs/) link.
 
 2.	Next, install CudNN library from [this](https://developer.nvidia.com/cudnn) link following the exact instructions.
 
