@@ -29,8 +29,6 @@ Instructions on how to setup everything can be found bellow.
 
 ```
 Python 3
-```
-```
 CUDA capable machine (Unix/Linux is recommended) -> NVIDIA GPU
 Jupyter Notebook
 ```
