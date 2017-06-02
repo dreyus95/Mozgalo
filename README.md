@@ -32,8 +32,6 @@ Python 3
 ```
 ```
 CUDA capable machine (Unix/Linux is recommended) -> NVIDIA GPU
-```
-```
 Jupyter Notebook
 ```
 
@@ -72,11 +70,9 @@ as it is written inside the script and run it.
 To extract images use the next command:
 
 ```
-	features.lua resnet-200.t7 path_to_pic
-```
-```
-	features.lua resnet-200.t7 *    (for all pictures in dataset dir)
+features.lua resnet-200.t7 path_to_pic
 
+features.lua resnet-200.t7 *    (for all pictures in dataset dir)
 ```
 
 After this you get the features.t7 file with all features.
@@ -84,8 +80,7 @@ Size of feature vectors is 2048x1.
 To classify pictures(used for word embedding) use the following command:
 
 ```
-	th classify.lua resnet-200.t7 path_to_pic
-
+th classify.lua resnet-200.t7 path_to_pic
 ```
 
 You can see our implementation of word embeddings inside UnsupervisedImageClassifier.ipynb notebook and the results it yielded.
