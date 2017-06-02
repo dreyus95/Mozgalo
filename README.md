@@ -72,7 +72,7 @@ To extract images use the next command:
 ```
 features.lua resnet-200.t7 path_to_pic
 
-features.lua resnet-200.t7 *    (for all pictures in dataset dir)
+features.lua resnet-200.t7 *			(for all pictures in dataset dir)
 ```
 
 After this you get the features.t7 file with all features.
